@@ -1,0 +1,14 @@
+<% @posts.each do |post| %>
+<h2>Title:<%= post.title %></h2>
+<p> Body: <%= post.body %></p>
+<br>
+<%= link_to "Click to Open Post", user_post_path(@user , post)  %>
+<%= link_to "Delete Post", user_post_path(@user , post), method: :delete, data: {Confirm: "Are you sure?"}  %>
+<hr>
+<% end %>
+
+
+
+
+
+

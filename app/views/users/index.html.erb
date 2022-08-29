@@ -1,0 +1,10 @@
+<% @users.each do |user| %>
+<h2><%= user.name %></h2>
+<p> Occupation: <%= user.occupation %></p>
+<br>
+<%= link_to "Click me", user_path(user) %>
+<%= link_to "Edit  me", edit_user_path(user) %>
+<%= link_to "Delete User", user_path(user), method: :delete, data: {Confirm: "Are you sure?"}  %>
+
+<hr>
+<% end %>
